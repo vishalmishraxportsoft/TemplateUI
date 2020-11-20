@@ -1,0 +1,123 @@
+﻿@model IEnumerable<Template.Models.Event>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<div class="table_evntslist">
+    <div class="table-responsive">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Detail)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Picture)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Photo)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Requirement)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Time)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Location)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ParticipationIcon)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ISsetlimited)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Setlimited)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.IsNeedApproval)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.StartDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.EndDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Category)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Detail)
+                        </td>
+                        <td>
+                            <img src="@Html.DisplayFor(modelItem => item.Picture)" height="75px" width="75px" />
+                            @*@Html.DisplayFor(modelItem => item.Picture)*@
+                        </td>
+                        <td>
+                            <img src="@Html.DisplayFor(modelItem => item.Photo)" height="75px" width="75px" />
+                            @*@Html.DisplayFor(modelItem => item.Photo)*@
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Requirement)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Time)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Location)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ParticipationIcon)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ISsetlimited)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Setlimited)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IsNeedApproval)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.StartDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EndDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Category.Id)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                            @*<a asp-action="Details" asp-route-id="@item.Id">Details</a> |*@
+                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

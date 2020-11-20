@@ -1,0 +1,58 @@
+﻿
+@model Template.Models.Department
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="name_logo">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="nm_fields">
+                <div class="form-group">
+                    <label> <input type="text" value="@Html.DisplayFor(modelItem => Model.NameAR)" disabled> Name AR</label>
+                </div>
+                <div class="form-group">
+                    <label> <input type="text" value="@Html.DisplayFor(modelItem => Model.NameEN)" disabled> Name EN</label>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="nm_logo"><img src="@Html.DisplayFor(modelItem => Model.Logo)"></div>
+        </div>
+    </div>
+</div>
+<nav>
+    <div class="nav nav-tabs h_list" id="nav-tab" role="tablist">
+        <a class="nav-item nav-link active" id="nav-DepSetting-tab" data-toggle="tab" href="#nav-DepSetting" role="tab" aria-controls="nav-DepSetting" aria-selected="true">Department Settings</a>
+        <a class="nav-item nav-link" id="nav-Validity-tab" data-toggle="tab" href="#nav-Validity" role="tab" aria-controls="nav-Validity" aria-selected="false">Validity</a>
+        <a class="nav-item nav-link" id="nav-Users-tab" data-toggle="tab" href="#nav-Users" role="tab" aria-controls="nav-Users" aria-selected="false">Users</a>
+        <a class="nav-item nav-link" id="nav-Courses-tab" data-toggle="tab" href="#nav-Courses" role="tab" aria-controls="nav-Courses" aria-selected="false">Courses</a>
+        <a class="nav-item nav-link" id="nav-Events-tab" data-toggle="tab" href="#nav-Events" role="tab" aria-controls="nav-Events" aria-selected="false">Events</a>
+    </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-DepSetting" role="tabpanel" aria-labelledby="nav-DepSetting-tab">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+    <div class="tab-pane fade" id="nav-Validity" role="tabpanel" aria-labelledby="nav-Validity-tab">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+    <div class="tab-pane fade" id="nav-Users" role="tabpanel" aria-labelledby="nav-Users-tab">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+    <div class="tab-pane fade" id="nav-Courses" role="tabpanel" aria-labelledby="nav-Courses-tab">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+    <div class="tab-pane fade" id="nav-Events" role="tabpanel" aria-labelledby="nav-Events-tab">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+</div>
+@*<div class="h_list">
+        <a href="#">Department Settings</a><a href="#">Validity</a><a href="#">Users</a><a href="#">Courses</a><a href="#">Events</a>
+    </div>
+    <div class="nm_textarea">
+        <div class="form-group">
+            <textarea></textarea>
+        </div>
+    </div>*@

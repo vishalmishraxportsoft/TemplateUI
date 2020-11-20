@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Template.Models.Event>
+
+<div class="container">
+    <div class="tabs_main">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#home">Courses</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#menu1">Events</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div id="home" class="tab-pane active">
+
+                <div class="clearfix"></div>
+            </div>
+            <div id="menu1" class="tab-pane fade">
+                @foreach (var item in Model)
+                {
+                    <a href="@Url.Action("Details", "Events",new { id = item.Id })">
+                        <div class="event_main">
+                            <div class="row">
+                                <div class="col-md-4 rightev ">
+                                    <div class="event_img">
+                                        <img src=" @Html.DisplayFor(modelItem => item.Picture)">
+                                    </div>
+                                </div><!--col-md-4 rightev -->
+                                <div class="col-md-8 leftev">
+                                    <div class="event_infos">
+                                        <h3> @Html.DisplayFor(modelItem => item.Name)</h3>
+                                        <p>@Html.DisplayFor(modelItem => item.Detail)</p>
+                                    </div>
+                                </div>
+                            </div><!--col-md-8 leftev-->
+                            <div class="clearfix"></div>
+                        </div><!--event_main-->
+                    </a>
+                }
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
